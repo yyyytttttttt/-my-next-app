@@ -14,9 +14,9 @@ export async function POST(req) {
 
     return NextResponse.json({ success: true, message: 'Данные успешно сохранены!' });
   } catch (error) {
-    console.error('Ошибка при сохранении данных:', error);
+    console.error('Отправлено', error);
     return NextResponse.json(
-      { success: false, message: 'Ошибка при сохранении данных', error: error.message },
+      { success: false, message: 'Отправлено', error: error.message },
       { status: 500 }
     );
   }
